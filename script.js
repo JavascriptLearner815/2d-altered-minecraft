@@ -19,7 +19,26 @@ function startGame() {
   gamePiece = new Component(30, 30, "red", 10, 120)
 }
 
-startGame()
+class Component {
+  constructor(width, height, color, x, y) {
+    this.width = width
+    this.height = height
+    this.speedX = 0
+    this.speedY = 0
+    this.color = color
+    this.x = x
+    this.y = y
+  }
+  update() {
+    ctx = gameArea.context
+    ctx.fillStyle = this.color
+    ctx.fillRect(this.x, this.y, this.width, this.height)
+  }
+  newPos() {
+    this.x += this.speedX
+    this.y += this.speedY
+  }
+}
 
 function updateGame() {
   gameArea.clear()
