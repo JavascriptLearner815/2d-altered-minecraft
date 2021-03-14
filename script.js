@@ -42,7 +42,7 @@ const gameArea = {
     this.canvas.height = 270
     this.context = this.canvas.getContext("2d")
     main.insertBefore(this.canvas, main.childNodes[0])
-    this.interval = setInterval(updateGameArea, 20)
+    this.interval = setInterval(updateGame, 20)
   },
   clear() {
     this.context.clearRect(0, 0, this.canvas.width, this.canvas.height)
