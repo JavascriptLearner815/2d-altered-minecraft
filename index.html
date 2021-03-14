@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <script defer src="script.js"></script>
   </head>
-  <body>
+  <body onload="startGame()">
     <header>
       <h1>2D Altered Minecraft</h1>
       <nav>
@@ -21,7 +21,12 @@
       </nav>
     </header>
     <main id="main">
-      
+      <div style="text-align:center;width:480px;">
+        <button onmousedown="up()" onmouseup="stop()" ontouchstart="up()">UP</button>
+        <button onmousedown="down()" onmouseup="stop()" ontouchstart="down()">DOWN</button>
+        <button onmousedown="left()" onmouseup="stop()" ontouchstart="left()">LEFT</button>
+        <button onmousedown="right()" onmouseup="stop()" ontouchstart="right()">RIGHT</button>
+      </div>
     </main>
     <footer>
       <p>© SpeedoThreeSixty (Dean Alan Summer) 2021. This Project Is Under The MPL-2.0 License. For Unofficial Use Only. All Rights Reserved.</p>
