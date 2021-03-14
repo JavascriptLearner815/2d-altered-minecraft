@@ -3,8 +3,8 @@
 }
 body {
   font-family: "Roboto", sans-serif;
-  background: darkgray;
-  color: #333;
+  background: #333;
+  color: darkgray;
   font-size: 80%;
 }
 img {
