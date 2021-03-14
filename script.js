@@ -1,5 +1,18 @@
 const main = document.getElementById("main")
 let gamePiece
+const gameArea = {
+  canvas: document.createElement("canvas"),
+  start() {
+    this.canvas.width = 480
+    this.canvas.height = 270
+    this.context = this.canvas.getContext("2d")
+    main.insertBefore(this.canvas, main.childNodes[0])
+    this.interval = setInterval(updateGame, 20)
+  },
+  clear() {
+    this.context.clearRect(0, 0, this.canvas.width, this.canvas.height)
+  }
+}
 
 function startGame() {
   gameArea.start()
@@ -33,20 +46,6 @@ function right() {
 function stop() {
   gamePiece.speedX = 0
   gamePiece.speedY = 0
-}
-
-const gameArea = {
-  canvas: document.createElement("canvas"),
-  start() {
-    this.canvas.width = 480
-    this.canvas.height = 270
-    this.context = this.canvas.getContext("2d")
-    main.insertBefore(this.canvas, main.childNodes[0])
-    this.interval = setInterval(updateGame, 20)
-  },
-  clear() {
-    this.context.clearRect(0, 0, this.canvas.width, this.canvas.height)
-  }
 }
 
 class Component {
