@@ -6,6 +6,8 @@ function startGame() {
   gamePiece = new Component(30, 30, "red", 10, 120)
 }
 
+startGame()
+
 function updateGame() {
   gameArea.clear()
   gamePiece.newPos()
