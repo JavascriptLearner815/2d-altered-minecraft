@@ -67,5 +67,3 @@ class Component {
     this.y += this.speedY
   }
 }
-
-startGame()
